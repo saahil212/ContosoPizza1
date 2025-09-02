@@ -1,0 +1,18 @@
+Benefits of creating APIs in ASP.NET Core
+===============================================
+With ASP.NET, you can use the same framework and patterns to build both webpages and services. This means you can reuse model classes and validation logic, and even serve both webpages and services side by side in the same project. This approach has benefits:
+
+Simple serialization: ASP.NET was designed for modern web experiences. Endpoints automatically serialize your classes to properly formatted JSON out of the box. No special configuration is required. Of course, you can customize serialization for endpoints that have unique requirements.
+
+Authentication and authorization: For security, API endpoints have built-in support for industry-standard JSON Web Tokens (JWTs). Policy-based authorization gives you the flexibility to define powerful access-control rules in code.
+
+Routing alongside your code: ASP.NET lets you define routes and verbs inline with your code by using attributes. Data from the request path, query string, and request body are automatically bound to method parameters.
+
+HTTPS by default: HTTPS is an important part of modern, professional web APIs. It relies on end-to-end encryption to provide privacy, and to help ensure that your API calls aren't intercepted and altered between client and server.
+
+ASP.NET provides support for HTTPS out of the box. It automatically generates a test certificate and easily imports it to enable local HTTPS, so you can run and debug your applications securely before you publish them.
+
+================================================================================================================
+dotnet tool install --global Microsoft.dotnet-httprepl --version 3.0.0-preview.19423.2
+
+The HTTP Read-Eval-Print Loop (REPL) is a lightweight, cross-platform command-line tool that's supported everywhere .NET Core is supported and is used for making HTTP requests to test ASP.NET Core web APIs and view their results.
